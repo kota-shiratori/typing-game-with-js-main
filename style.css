@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
   /* background-color: rgb(185, 230, 224); */
   background: linear-gradient(to left top,
       rgb(219, 143, 143),
@@ -55,7 +56,7 @@ body {
   height: 14rem;
   margin: auto;
   resize: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   font-size: 1rem;
 }
@@ -74,10 +75,19 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .timer {
+    position: absolute;
+    top: 1rem;
+    font-size: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
   .container {
     padding: 1rem;
-    min-height: 300px;
+    min-height: 200px;
     font-size: 2rem;
+    margin: auto;
+    margin-top: 100px;
   }
 
   .type-display {
@@ -88,6 +98,9 @@ body {
 
   .container .type-input {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 16px;
+  }
+  .container .type-input::placeholder {
+    color: #fff;
   }
 }
